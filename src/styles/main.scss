@@ -12,3 +12,378 @@
 
 // БЭМ-блоки
 @import "../blocks/modules";
+
+// мой код
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: "Roboto";
+}
+a{
+    text-decoration: none;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+ul{
+    list-style: none;
+}
+.header{
+    background: linear-gradient(269.91deg, rgba(46, 49, 146, 0.7) 0%, rgba(77, 44, 136, 0.7) 18.05%, rgba(212, 20, 90, 0.7) 98.16%);
+}
+.menu{
+    a{
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+    &__list{
+        min-height: 77px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    // &__item{
+    // }
+    &__item-text{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 16px;
+    }
+    &__item-text--phone::before{
+        content: url(../img/sprites/ico-phone.svg);
+        vertical-align: middle;
+        background-size: contain;
+        position: relative;
+        margin-right: 10px;
+    }
+    &__item-text--sity::before{
+        content: url(../img/sprites/map-mark.svg);
+        vertical-align: middle;
+        background-size: contain;
+        position: relative;
+        margin-right: 10px;
+    }
+    &__item-text--inst{
+        &::before{
+            content: url(../img/sprites/ico-inst.svg);
+            vertical-align: middle;
+            background-size: contain;
+            position: relative;
+            margin-right: 10px;
+        }
+    }
+}
+.top{
+    background-image: url(../img/sprites/fon-1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 47px;
+    &__logo{
+        display: flex;
+    }
+    &__menu{
+        display: flex;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 21px;
+        text-align: center;
+    }
+    &__menu-review, &__menu-about{
+        margin-right: 25px;
+        color: #737373;
+    }
+    &__menu-contact{
+        color: #737373;
+    }
+    &__logo-icon{
+        margin-right: 10px;
+    }
+    &__logo-text{
+        font-style: italic;
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 42px;
+    }
+    &__left{
+        margin-top: 205px;
+    }
+    &__left-title{
+        font-style: normal;
+        font-weight: 900;
+        font-size: 50px;
+        line-height: 59px;
+        max-width: 600px;
+        margin-bottom: 10px;
+
+    }
+    &__left-text{
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 25px;
+    }
+    &__left-btn{
+        background: linear-gradient(95.2deg, #B90160 2.23%, #2E3192 99.51%);
+        border-radius: 7px;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 23px;
+        text-align: center;
+        color: #FFFFFF;
+        padding: 15px 40px;
+        cursor: pointer
+    }
+    // &__right{
+    // }
+}
+.top-line{
+    vertical-align: middle;
+    display: flex;
+    justify-content: space-between;
+    // margin-bottom: 205px;
+}
+.top-center{
+    display: flex;
+}
+.about-eva{
+    background-image: url(../img/sprites/fon-2.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position-y: 200px;
+    background-position-x: -25px;
+    overflow: visible;
+
+    padding-bottom: 225px;;
+
+    &__title{
+        margin-top: 25px;
+        text-align: center;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 50px;
+        line-height: 59px;
+        color: #000000;
+            }
+    &__eva{  
+        background: linear-gradient(180deg, #B90160 0%, #3D5BF5 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+}
+.about-card{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 120px;
+    &__top{
+        display: block;
+    }
+    &__item{
+        background-color: #fff;
+        overflow: hidden;
+        box-shadow: 0px 0px 40px rgba(184, 0, 95, 0.2);
+        border-radius: 9px;
+        max-width: 344px;
+    }
+    // &__top{
+    // }
+    &__img{
+        &>img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__info{
+        margin-right: 33px;
+        margin-left: 22px;
+        margin-bottom: 23px;
+    }
+    &__title{
+        margin-top: 27px;
+        margin-bottom: 23px;
+
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 42px;
+        color: #000000;
+    }
+    &__text{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 16px;
+
+        color: #767676;
+    }
+}
+.slider-review{
+    background: linear-gradient(94.31deg, rgba(212, 20, 90, 0.25) 0.96%, rgba(46, 49, 146, 0.25) 104.83%);
+    min-width: 0;
+    &__wrap{
+        // width: 1750px;
+        display: flex;
+        // justify-content: space-between;
+        // padding: 0 15px;
+        margin: 0 auto;
+    }
+    &__item{
+        width: 536px;
+        text-align: center;
+        margin-bottom: 45px;
+        margin-top: 38px;
+    }
+
+    &__img{
+        margin-bottom: -38px;
+        // -webkit-mask-image: url(../image/sota.png);
+        // -webkit-mask-repeat: no-repeat;
+        // -webkit-mask-position: center;
+        // height: 104px;
+
+    }
+    &__block{
+        background: #FFFFFF;
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
+        border-radius: 9px;
+        padding: 63px 45px 0 45px;
+        min-height: 187px;
+    }
+    &__text{
+        margin-bottom: 10px;
+    }
+    &__name{
+        padding-bottom: 20px;
+        &::before{
+            content: '';
+            display: block;
+            height: 2px;
+            max-width: 130px;
+            background: linear-gradient(to right, #D4145A, #3D5BF5);
+            margin: 0 auto 10px;
+            // background: linear-gradient(#D4145A 100 % #3D5BF5 100 %);
+        }
+    }
+}
+.swiper-slide{
+    opacity: 0.4;
+}
+.swiper-slide-active{
+    opacity: 1;
+}
+// .swiper-container{
+//     width: 100%;
+// }
+.footer{
+    margin-top: 15px;
+    background-image: url(../img/sprites/fon-3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    &__wrap{
+        padding-top: 150px;
+        padding-bottom: 100px;
+        display: flex;
+        justify-content: space-around;
+    }
+    &__about{
+        max-width: 225px;
+    }
+    &__inst-title, &__contact-title, &__about-title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        color: #000000;
+
+        margin-bottom: 22px;
+    }
+    &__contact-phone, &__about-info, &__about-info-sity   {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 10px;
+        color: #000000;
+        text-decoration: none;
+    }
+    &__about-info-sity{
+        margin-top: 22px;
+    }
+}
+
+
+// сделать слайдер!!!
+// возможно с помощью него задать item положение выходящее за экран
+// исправил, порсто добавить кооличесто айтемов
+
+
+// стили формы
+
+// сделать форму с замылением за ней
+
+#modalForm{
+    display: none;
+}
+#filter {
+    filter: blur(0.4);
+    background-color:rgba(0, 0, 0, 0.25) ;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    display: none;
+
+}
+// стили формы
+
+
+.swiper-horizontal {
+
+    overflow: hidden;
+}
+
+
+// дальше медиазапросы
+// но, я так и не разобрался как сделать рамку
+
+
+
+// минимальнай размер контейнера 960(на глаз определял)
+
+@media (max-width: 1300px){
+
+}
+@media (max-width: 1024px){
+    .container{
+        max-width: 960px;
+    }
+    .about-card__item {
+        max-width: 300px;
+    }
+    
+}
+@media (max-width: 960px){
+    // все пошло вертикаольно
+}
+@media (max-width: 768px){
+    // все пошло вертикаольно
+}
+
+// еще не понятно как перенести чтрочку у лого инсты
+
