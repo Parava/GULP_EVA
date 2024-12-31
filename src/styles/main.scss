@@ -373,19 +373,174 @@ ul{
 @media (max-width: 1024px){
     .container{
         max-width: 960px;
-    }
+    }  
     .about-card__item {
         max-width: 300px;
     }
     
 }
-@media (max-width: 960px){
-    // все пошло вертикаольно
-}
+
+// все пошло вертикаольно
 @media (max-width: 768px){
-    // все пошло вертикаольно
+    // топ
+    .menu__list{
+        margin-right: 40px;
+    }
+    .menu__item:first-child{
+        visibility: hidden;
+        width: 200px;
+    }
+    .top .container{
+        max-width: 640px;
+    }
+    .top__right{
+        img{
+            max-width: 368px;
+        }
+    }
+    .top__left{
+        margin-top: 60px;
+    }
+    .top__left-title{
+        font-weight: 900;
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    // карточки
+    .about-card{
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+        margin-top: 50px;
+        &__item{
+            max-width: 594px;
+            // max-height: 325px;
+        }
+        &__img > img {
+            height: 190px;
+        }
+    }
+    .about-eva {
+        padding-bottom: 124px;
+        background-image: url(../img/sprites/fon-4-mid.png);
+    }
+
+    // слайдер
+    .slider-review__block{
+        margin: 0px 87px 0px 87px;
+    }
+    
+    .top__menu {
+        display: none;
+    }
+    .about-eva::after{
+        content: "";
+        width: 190px;
+        height: 290px;
+        display: block;
+        background-image: url(../img/sprites/fon-4-mid.png);
+        background-repeat: no-repeat;
+        position: absolute;
+        right: 3px;
+        bottom:  -1355px;
+        z-index: -1;
+    }
+
+    .footer{
+        background-image: url(../img/sprites/fon-5-footer.png);
+    }
 }
 
+@media (max-width: 425px){
+    // все пошло вертикаольно
+    .slider-review__block{
+        margin: 0px 20px 0px 20px;
+    }
+
+    .top__right{
+        display: none;
+    }
+
+
+    .menu__item:first-child{
+        visibility: visible;
+        margin-right: -20px;
+        margin-bottom: 17px;
+        margin-top: 22px;
+    }
+    .menu__item-text--phone::before{
+        content: none;
+    }
+    .menu__item-text--sity::before{
+        content: none;
+    }
+    .menu__item-text--inst{
+        display: none;
+    }
+    .menu__item-text--sity{
+        margin-bottom: -20px;
+    }
+
+    .menu__list {
+        min-height: 77px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 0;
+        padding-bottom: 21px;
+    }
+    .top-line {
+        justify-content: center;
+    }
+    .top__left {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        &-title{
+            width: 305px;
+            text-align: center;
+
+        }
+    }
+    .top-center{
+        display: block;
+    }
+
+    .about-card__item {
+        margin: 0 20px;
+    }
+
+
+    .footer__wrap {
+        padding-top: 50px;
+        padding-bottom: 50px; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer__{
+        &inst{
+            order: 1;
+        }
+        &contacts{
+            order: 0;
+        }
+        &about{
+            order: 2;
+        }
+    }
+
+}
+@media (max-width: 321px){
+    // все пошло вертикаольно
+}
 // еще не понятно как перенести чтрочку у лого инсты
 
 
